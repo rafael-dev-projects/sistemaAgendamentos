@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema Profissional de Agendamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu Lateral -->
+    <aside class="sidebar">
+      <h1>Gestão de Agendamentos</h1>
+      <ul>
+        <li id="btn-dashboard">📊 Dashboard</li>
+        <li id="btn-clientes">👤 Clientes</li>
+        <li id="btn-agendamentos">📅 Agendamentos</li>
+        <li id="btn-relatorios">📄 Relatórios</li>
+      </ul>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+      <section id="dashboard" class="pagina ativo">
+        <h2>📊 Dashboard</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Total de Clientes</h3>
+            <p id="total-clientes">0</p>
+          </div>
+          <div class="card">
+            <h3>Total de Agendamentos</h3>
+            <p id="total-agendamentos">0</p>
+          </div>
+          <div class="card">
+            <h3>Próximos Atendimentos</h3>
+            <ul id="proximos-atendimentos"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="clientes" class="pagina">
+        <h2>👤 Clientes</h2>
+        <form id="form-cliente">
+          <input type="text" id="nome-cliente" placeholder="Nome do Cliente" required>
+          <input type="email" id="email-cliente" placeholder="E-mail do Cliente" required>
+          <button type="submit">Cadastrar Cliente</button>
+        </form>
+        <ul id="lista-clientes"></ul>
+      </section>
+
+      <section id="agendamentos" class="pagina">
+        <h2>📅 Agendamentos</h2>
+        <form id="form-agendamento">
+          <input type="text" id="nome-agendamento" placeholder="Nome do Cliente" required>
+          <input type="date" id="data-agendamento" required>
+          <input type="time" id="hora-inicio" required>
+          <input type="time" id="hora-fim" required>
+          <input type="number" id="numero-cliente" placeholder="Número do Cliente" required>
+          <input type="number" id="valor-servico" placeholder="Valor do Serviço" required>
+          <select id="forma-pagamento" required>
+            <option value="">Forma de Pagamento</option>
+            <option value="cartao">Cartão</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="pix">PIX</option>
+          </select>
+          <select id="status-atendimento" required>
+            <option value="pendente">Pendente</option>
+            <option value="concluido">Concluído</option>
+            <option value="faltou">Cliente Faltou</option>
+          </select>
+          <button type="submit">Agendar</button>
+        </form>
+        <ul id="lista-agendamentos"></ul>
+      </section>
+
+      <section id="relatorios" class="pagina">
+        <h2>📄 Relatórios</h2>
+        <p>Aqui você poderá gerar relatórios detalhados sobre clientes, agendamentos e feedbacks.</p>
+        <button onclick="gerarRelatorio()">Gerar Relatório</button>
+        <pre id="relatorio-gerado"></pre>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
