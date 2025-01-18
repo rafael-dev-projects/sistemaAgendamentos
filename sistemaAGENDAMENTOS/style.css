@@ -11,6 +11,32 @@ body {
     height: 100vh;
 }
 
+.area-cliente-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.area-cliente-link a {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.area-cliente-link a:hover {
+    background-color: #16a085;
+}
+
+/* Estilo do conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
 /* Estilo da sidebar */
 .sidebar {
     width: 250px;
@@ -42,6 +68,46 @@ body {
 .sidebar ul li:hover {
     background-color: #1abc9c;
 }
+
+#gerarRelatorio {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#relatorio-gerado {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+
+/* Estilo para o botão de agendar */
+#btn-agendar {
+    background-color: #1abc9c;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn-agendar:hover {
+    background-color: #16a085;
+}
+
+/* Esconder o formulário inicialmente */
+#form-agendamento-container {
+    display: none;
+}
+
 
 /* Estilo do conteúdo principal */
 .main-content {
@@ -129,3 +195,83 @@ ul li button {
 ul li button:hover {
     background-color: #c0392b;
 }
+
+/* Estilo do Login */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  #login-form {
+    width: 100%;
+    max-width: 350px; /* Limita a largura do formulário */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+  }
+  
+  #login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #login-form button:hover {
+    background-color: #16a085;
+  }
+  
+  #login-error {
+    color: red;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    display: none; /* Exibe somente em caso de erro */
+  }
+  
+  /* Estilo para o link de "Esqueci minha senha" (opcional) */
+  #esqueci-senha {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  #esqueci-senha a {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+  
+  #esqueci-senha a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Cliente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Menu Lateral -->
+    <aside class="sidebar">
+      <h1>Gestão do Cliente</h1>
+      <ul>
+        <li id="btn-agendar">📅 Agendar Atendimento</li>
+        <li id="btn-feedback">💬 Enviar Feedback</li>
+        <li id="btn-sair">🚪 Sair</li>
+      </ul>
+    </aside>
+
+    <!-- Área Principal -->
+    <main class="main-content">
+      <section id="agendamentos">
+        <h2>📅 Agendar Atendimento</h2>
+        <form id="form-agendamento">
+          <input type="date" id="data-agendamento" required>
+          <input type="time" id="hora-inicio" required>
+          <input type="time" id="hora-fim" required>
+          <button type="submit">Agendar</button>
+        </form>
+        <p id="agendamento-mensagem" style="color: green;"></p>
+      </section>
+
+      <section id="feedback">
+        <h2>💬 Enviar Feedback</h2>
+        <form id="form-feedback">
+          <textarea id="feedback-texto" placeholder="Deixe seu feedback" required></textarea>
+          <button type="submit">Enviar Feedback</button>
+        </form>
+        <p id="feedback-mensagem" style="color: green;"></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

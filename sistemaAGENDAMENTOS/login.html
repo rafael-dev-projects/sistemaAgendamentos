@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Sistema de Agendamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Área de Login</h2>
+    <form id="login-form">
+      <input type="email" id="email-login" placeholder="E-mail" required>
+      <input type="password" id="senha-login" placeholder="Senha" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-error" style="display: none; color: red;">E-mail ou senha inválidos.</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
